@@ -7,11 +7,13 @@ public class SkillsAsset : SkillsParamsSample
 {
     public override AllParams UseSkill()
     {
-        var param = new AllParams();
-        param.healthBuff = healthBuff;
-        param.attackBuff = attackBuff;
-        param.speedBuff = speedBuff;
-        param.buffDelay = buffDelay;
+        var param = new AllParams()
+        {
+            healthBuff = this.healthBuff,
+            attackBuff = this.attackBuff,
+            speedBuff = this.speedBuff,
+            buffDelay = this.buffDelay
+        };
 
         _skillActive.Init();
 
